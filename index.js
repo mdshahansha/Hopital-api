@@ -14,6 +14,9 @@ app.use(express.urlencoded({
 
 //redirecting routes
 app.use('/', require('./routes'));
+app.get('/', (req,res)=>{
+    res.send('<h1>Puja home render pe deploy done </h1>')
+});
 
 app.listen(port, function (err) {
     if (err) { console.log('error'); return; }
